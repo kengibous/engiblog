@@ -16,11 +16,11 @@ Common tools that we use today
 
 - Octopus for deployments
 - Proget for nuget packages and private docker repo
-- Gitlab for source code, builds, continous integration
+- Gitlab for source code, builds, continuous integration
 - TeamCity - legacy applications are largely built here
 - SVN - legacy applications source code here
 
-Plans for new archtecture
+Plans for new architecture
 
 - Kubernetes cluster on premise - Using Rancher to provision cluster 
 - Mix of Linux and Windows kubernetes worker nodes.  As of version 1.14 windows nodes are supported, however 1.14 is experiment in Rancher as of this time.
