@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Resizing a Persistent Volume Claim (PVC) 
-date: 2020-19-01T17:16:10.000Z
+date: 2020-01-19T17:28:52.7669557-06:00
 description: How to resize a persistent volume claim
 tags:
   - kubernetes
