@@ -23,7 +23,7 @@ Common tools that we use today
 Plans for new architecture
 
 - Kubernetes cluster on premise - Using Rancher to provision cluster 
-- Mix of Linux and Windows kubernetes worker nodes.  As of version 1.14 windows nodes are supported, however 1.14 is experiment in Rancher as of this time.
+- Mix of Linux and Windows kubernetes worker nodes.  As of version 1.14 windows nodes are supported, however 1.14 is experimental on Rancher as of this time.
 - New applications will be .NET Core on Linux
 - Deploy to Kubernetes using Octopus
 - Use Gitlab for CI and docker private repo (move off of proget)
