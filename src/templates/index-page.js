@@ -96,7 +96,7 @@ export const IndexPageTemplate = ({
 
                 <div className="columns">
                   <div className="column is-12">
-                    <h1 className="title">Volunteer Activities</h1>
+                    <h1 className="title">Academic History</h1>
                     <p>
                       B.S. Computer Science, UW Milwaukee 2003 - 2007 <b>Magna Cum Laude</b><br/>
                       M.S. Computer Science, UW Milwaukee 2007 - 2011<br/>
