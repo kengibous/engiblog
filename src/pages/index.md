@@ -30,3 +30,20 @@ intro:
           Introduction to Linux Operation Systems
           Introduction to C++ Programming
           Introduction to Java Programming
+  heading: What we offer
+  description: >
+    dfgh
+main:
+  heading: dfgh
+  description: >
+    dfgh
+  image1:
+    alt: dfhgfg
+    image: /img/dfgh
+  image2:
+    alt: dfgh
+    image: /img/dfgh
+  image3:
+    alt: fgdh
+    image: /img/dfgh
+---
