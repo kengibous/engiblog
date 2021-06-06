@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Kyle Engibous',
     description:
-      'Kyle Engibous - DevOps or NoOps that is the question.  Current development interestes in angularJS, nodeJS and Single Page Web Applications',
+      'Kyle Engibous - Systems Architecture - Kubernetes solutions and DevSecOps practices',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

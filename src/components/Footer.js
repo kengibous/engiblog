@@ -6,6 +6,7 @@ import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import github from "../img/github-icon.svg";
+import linkedin from "../img/social/linkedin.svg";
 
 const Footer = class extends React.Component {
   render() {
@@ -29,11 +30,6 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="#interests">
-                        Interests
-                      </Link>
-                    </li>
-                    <li>
                       <Link className="navbar-item" to="/blog">
                         Blog
                       </Link>
@@ -42,13 +38,7 @@ const Footer = class extends React.Component {
                       <Link className="navbar-item" to="/contact">
                         Contact
                       </Link>
-                    </li>                    
-                    <li>
-                      <Link className="navbar-item" to="#projects">
-                        Projects
-                      </Link>
                     </li>
-                    
                   </ul>
                 </section>
               </div>
@@ -82,6 +72,14 @@ const Footer = class extends React.Component {
                   <img
                     src={github}
                     alt="Github"
+                    target="_blank"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="linkedin" href="https://www.linkedin.com/in/kyle-engibous-b636b24/">
+                  <img
+                    src={linkedin}
+                    alt="Linkedin"
                     target="_blank"
                     style={{ width: '1em', height: '1em' }}
                   />

@@ -79,18 +79,22 @@ export const IndexPageTemplate = ({
                 <div className="columns">
                   <div className="column is-6">
                     <h1 className="title">Volunteer Activities</h1>
-                    <p>I am also the VP of Technology for the Golden Retriever Rescue of Wisconsin (GRRoW). I manage their website (hosted by Squarespace), google drive, facebook page and any other technology related things for the organization.</p>
+                    <ul>
+                      <li>(Past) Church Live Streaming - Facebook Live, OBS software</li>
+                      <li>(Past) VP of Technology for the Golden Retriever Rescue of Wisconsin (GRRoW). I managed their website (hosted by Squarespace), google drive, facebook page and any other technology related things for the organization.</li>
+                    </ul>
                   </div>                  
 
                   <div className="column is-6">
 
                     <h1 className="title">Current Interests</h1>
-                    <p>
-                        Windows 10 IoT<br/>
-                        Anything Azure related<br/>
-                        Angular 2, Aurelia, ReactJS<br/>
-                        Elasticsearch, Kibana, Logstash (ELK)
-                    </p>
+                    <ul>
+                      <li>Kubernetes (focused on premise)</li>
+                      <li>Rancher</li>
+                      <li>DevSecOps Pratices</li>
+                      <li>Continuous Integration/Delivery Pipelines</li>
+                      <li>dotnet, asp.net, blazor</li>
+                    </ul>
                   </div>                  
                 </div>
 
@@ -108,48 +112,18 @@ export const IndexPageTemplate = ({
                     </p>
                   </div>                  
                 </div>
-
-                <div className="content" id="interests">
-                  <div className="tile">
+                
+                <div className="columns">
+                  <div className="column is-12">
                     <h1 className="title">Other Interests</h1>
-                  </div>                  
-                </div>     
-                <div className="columns">
-                  <div className="column is-12">
-                    <div style={{'padding-right': '15px', 'float' : 'left'}}><PreviewCompatibleImage imageInfo={{'image': '/img/badges.beer.png'}} /></div>
-                    <div style={{'padding-right': '15px', 'float' : 'left'}}><PreviewCompatibleImage imageInfo={{'image': '/img/badges.dogs.png'}} /></div>
-                    <div style={{'padding-right': '15px', 'float' : 'left'}}><PreviewCompatibleImage imageInfo={{'image': '/img/badges.gaming.png'}} /></div>
-                    <div style={{'padding-right': '15px', 'float' : 'left'}}><PreviewCompatibleImage imageInfo={{'image': '/img/badges.scifi.png'}} /></div>
-                    <div style={{'padding-right': '15px', 'float' : 'left'}}><PreviewCompatibleImage imageInfo={{'image': '/img/badges.weights.png'}} /></div>
+                    <ul>
+                      <li>Enjoys craft beers</li>
+                      <li>Dogs</li>
+                      <li>PC Gamer</li>
+                      <li>Sci-Fi Nerd</li>
+                      <li>Weight lifter</li>
+                    </ul>
                   </div>
-                </div>
-
-                <div className="content" id="projects">
-                  <div className="tile">
-                    <h1 className="title">Projects</h1>
-                  </div>                  
-                </div>   
-                <div className="columns">
-                  <div className="column is-6">
-                    <h1 className="title">Single App Web Applications</h1>
-                    <p>
-                        I am currently wrapping up a project that has evolved over the past five years. Originally, it was an ASP MVC 2 application that heavily utilized jQuery and jQueryUI. Looking to make the application a true single page web application (SPA), I decided to use Angular JS, Bootstrap, and ASP MVC 4-WebAPI. I completely redesigned the user interface and switched the back-end to JSON calls with WebAPI. Angular JS is a very impressive framework and does a lot of the heavy lifting. I was able to replace a lot of custom JavaScript code with Angular JS framework features.<br/>
-                    </p>                 
-                  </div>
-                  <div className="column is-6">
-                    <h1 className="title">iPhone Application (IOS dev)</h1>
-                    <p>
-                    I have started to dabble in some Objective-C after my girlfriend suggested an application she would like to have on her iPhone. She travels on the city bus daily to UW-Milwaukee and has complained that the transit system website is quite poor and makes finding the bus schedules difficult. However, the site does offer and API where one can retrieve all of the routes and schedules in CSV files. My goal is to make an iPhone application that gathers this information and provides an easy way to search and access this information. Ideally, this should help her bus traveling experience.
-                    </p>                 
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h1 className="title">Git Hub Contributions</h1>
-                    <p>
-                    I use a great project called Bonobo Git which is basically a git hub server that runs on windows. I have made several contributions to give back to such a wonderful and useful project.
-                    </p>                 
-                  </div>                 
                 </div>
                
                 <div className="column is-12">

@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.kyle.png";
+import facebook from '../img/social/facebook.svg'
+import instagram from '../img/social/instagram.svg'
+import twitter from '../img/social/twitter.svg'
+import linkedin from "../img/social/linkedin.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -63,17 +67,11 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="#aboutme">
                 About Me
               </Link>
-              <Link className="navbar-item" to="#interests">
-                Interests
-              </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
-              </Link>
-              <Link className="navbar-item" to="#projects">
-                Projects
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
@@ -85,6 +83,16 @@ const Navbar = class extends React.Component {
               >
                 <span className="icon-inverse">
                   <img src={github} alt="Github" />
+                </span>                
+              </a>
+              <a
+                className="navbar-item"
+                href="https://www.linkedin.com/in/kyle-engibous-b636b24/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon-inverse">
+                  <img src={linkedin} alt="Linkedin" />
                 </span>
               </a>
             </div>
