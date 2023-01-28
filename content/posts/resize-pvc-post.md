@@ -1,14 +1,15 @@
----
-templateKey: blog-post
-title: Resizing a Persistent Volume Claim (PVC) 
-date: 2020-01-19T17:28:52.7669557-06:00
-description: How to resize a persistent volume claim
-tags:
-  - kubernetes
-  - onprem
-  - pvc
-  - storage
----
++++ 
+draft = false
+date = 2020-01-19T17:28:52-06:00
+title = "Resizing a Persistent Volume Claim (PVC)"
+description = "How to resize a persistent volume claim"
+slug = ""
+authors = []
+tags = ["kubernetes", "pvc", "storage"]
+categories = []
+externalLink = ""
+series = []
++++
 
 I recently encountered a scenario where one of our stateful deployments that uses a pvc (Persistent Volume Claim) was running very low of space.  Having not encountered this scenario, I foolishly assumed that there would be some mechanism to easily expand the existing pvc being used by the stateful deployment.
 
