@@ -81,7 +81,12 @@ disqusShortname = "kyleengibous"
   name = "About"
   weight = 2
   url = "about/"
+[[menu.main]]
+  name = "Contact"
+  weight = 3
+  url = "contact/"
 
- # Cloudflare analytics
- [params.cloudflare]
-    token = "token" 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
