@@ -16,7 +16,7 @@ date: 2023-01-28T14:00:17-07:00
       <input id="contact-form-name" name="Name" type="text" placeholder="Name" 
               required="" autocomplete="off">
       <label for="contact-form-email">Email</label>
-      <input id="contact-form-email" name="Name" type="email" placeholder="Email Address" 
+      <input id="contact-form-email" name="Email" type="email" placeholder="Email Address" 
           required="" autocomplete="off">
       <label for="contact-form-subjec">Subject</label>
       <input id="contact-form-subject" name="Subject" type="text" placeholder="Subject" 
