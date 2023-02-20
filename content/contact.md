@@ -5,13 +5,19 @@ date: 2023-01-28T14:00:17-07:00
 
 You can contact me here!
 
-<form name="contact" class="contact-form width-normal" action="/thankyou/" method="POST" data-netlify="true">
+<form name="contact" class="contact-form width-normal" action="/thankyou/" method="POST" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true">
     <input type="hidden" name="form-name" value="contact" />
+    <p style="display: none;">
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
+    </p>
     <!-- Text input-->
     <div class="form-group">
         <label class="col-md-4 control-label" for="Name"></label>
         <div class="col-md-4">
-            <input id="contact-form-name" name="Name" type="text" placeholder="Name" class="form-control input-md" required="" autocomplete="off">
+            <input id="contact-form-name" name="Name" type="text" placeholder="Name" 
+            class="form-control input-md" required="" autocomplete="off">
         </div>
     </div>
     <!-- Text input-->
