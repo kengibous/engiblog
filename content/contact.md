@@ -3,9 +3,8 @@ title: "Contact Me"
 date: 2023-01-28T14:00:17-07:00
 ---
 
-You can contact me here!
-
 <div class="container">
+  You can contact me here!
   <form name="contact" class="contact-form width-normal" action="/thankyou/" method="POST" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true">
       <input type="hidden" name="form-name" value="contact" />
       <p style="display: none;">
@@ -24,7 +23,7 @@ You can contact me here!
               required="" autocomplete="off">
       <label for="contact-form-message">Message</label>
       <textarea id="contact-form-message" name="Message" placeholder="" style="height:200px"></textarea>
-      <div data-netlify-recaptcha="true"></div>
+      <div class="recaptcha" data-netlify-recaptcha="true"></div>
       <input type="submit" value="Submit" id="Form-submit"></button>
   </form>
 </div>
