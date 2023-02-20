@@ -39,6 +39,7 @@ You can contact me here!
         <label class="col-md-4 control-label" for=""></label>
         <textarea class="form-control" id="contact-form-message" name="Message" placeholder="" rows="8"></textarea>
     </div>
+    <div data-netlify-recaptcha="true"></div>
     <!-- Button -->
     <div class="form-group">
         <button type="submit" value="Submit" id="Form-submit">Submit</button>
