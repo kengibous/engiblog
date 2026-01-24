@@ -4,13 +4,14 @@ theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 20
-
 pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "kyleengibous"
+
+[pagination]
+  pagerSize = 20
 
 [params]
   author = "Kyle Engibous"
