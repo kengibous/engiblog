@@ -3,7 +3,7 @@ title: "About Me"
 date: 2023-01-28T14:00:17-07:00
 ---
 
-I am a 37-year-old male living in Tempe, Arizona, as of April 2021 (from Waukesha, WI) - with a passion for all things computer-related. I have been amazed with computers and technology since I was a little kid, and nothing about that has changed. Currently I am a System Architect - focusing on Kubernetes based solutions and helping teams adopt DevSecOps practices
+I am a 40-year-old male living in New Berlin, Wisconsin - with a passion for all things computer-related. I have been amazed with computers and technology since I was a little kid, and nothing about that has changed. Currently I am a System Architect - focusing on Kubernetes based solutions and helping teams adopt DevSecOps practices
 
 # Volunteer Activities
 - (Past) Church Live Streaming - Facebook Live, OBS software
