@@ -1,0 +1,16 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+</header>
+{{- $paginator := .Paginate .RegularPagesRecursive }}
+{{- range $paginator.Pages.GroupByDate "2006" }}
+<section class="year-group">
+  <h2 class="year">{{ .Key }}</h2>
+  {{ partial "post-list.html" .Pages }}
+</section>
+{{- else }}
+<p>Nothing here yet.</p>
+{{- end }}
+{{ partial "pagination.html" $paginator }}
+{{ end }}

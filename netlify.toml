@@ -1,8 +1,43 @@
 [build]
-publish = "public"
-command = "hugo --gc --minify"
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.154.5"
+  HUGO_ENABLEGITINFO = "true"
+  TZ = "America/Chicago"
 
 [context.production.environment]
-HUGO_VERSION = "0.154.5"
-HUGO_ENV = "production"
-HUGO_ENABLEGITINFO = "true"
+  HUGO_ENV = "production"
+
+# Previews build with their own URL so links/assets resolve on the preview domain.
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
+# CSS/JS are fingerprinted by Hugo, so they can be cached forever.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The old theme generated /<taxonomy>/page/1/ aliases; keep those URLs working.
+[[redirects]]
+  from = "/:taxonomy/page/1/"
+  to = "/:taxonomy/"
+  status = 301

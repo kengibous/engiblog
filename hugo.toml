@@ -1,39 +1,52 @@
-baseurl = "https://www.kyleengibous.com"
+baseURL = "https://www.kyleengibous.com/"
 title = "Kyle Engibous"
-theme = "hugo-coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
-
-pygmentsstyle = "bw"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
-disqusShortname = "kyleengibous"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+capitalizeListTitles = false
 
 [pagination]
   pagerSize = 20
+
+[services.disqus]
+  shortname = "kyleengibous"
 
 [params]
   author = "Kyle Engibous"
   info = "Cloud Architect and DevOps enthusiast"
   description = "Kyle Engibous personal website"
-  keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpg"
-  gravatar = "kyle.engibous@gmail.com"
-
-  favicon_32 = "/images/favicon-32x32.png"
-  favicon_16 = "/images/favicon-16x16.png"
-
+  keywords = ["blog", "developer", "personal", "kubernetes", "devops"]
+  avatar = "images/avatar.jpg"
+  images = ["images/avatar.jpg"]
   since = 2019
+  # Number of recent posts shown on the home page
+  recentPosts = 5
 
-  enableTwemoji = true
-
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
-
-  customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
+# Social links — `icon` is the name of an SVG in assets/icons/
+[[params.social]]
+  name = "GitHub"
+  icon = "github"
+  url = "https://github.com/kengibous/"
+[[params.social]]
+  name = "GitLab"
+  icon = "gitlab"
+  url = "https://gitlab.com/kengibous/"
+[[params.social]]
+  name = "X (Twitter)"
+  icon = "twitter-x"
+  url = "https://x.com/kengibous/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "linkedin"
+  url = "https://www.linkedin.com/in/kyle-engibous-b636b24/"
+[[params.social]]
+  name = "Facebook"
+  icon = "facebook"
+  url = "https://facebook.com/kyle.engibous"
+[[params.social]]
+  name = "Instagram"
+  icon = "instagram"
+  url = "https://instagram.com/kengibous"
 
 [taxonomies]
   category = "categories"
@@ -41,53 +54,26 @@ disqusShortname = "kyleengibous"
   tag = "tags"
   author = "authors"
 
-# Social links
-[[params.social]]
-  name = "Github"
-  icon = "fa fa-github fa-2x"
-  weight = 1
-  url = "https://github.com/kengibous/"
-[[params.social]]
-  name = "Gitlab"
-  icon = "fa fa-gitlab fa-2x"
-  weight = 2
-  url = "https://gitlab.com/kengibous/"
-[[params.social]]
-  name = "Twitter"
-  icon = "fa fa-twitter fa-2x"
-  weight = 3
-  url = "https://twitter.com/kengibous/"
-[[params.social]]
-  name = "Linkedin"
-  icon = "fa fa-linkedin fa-2x"
-  weight = 4
-  url = "https://www.linkedin.com/in/kyle-engibous-b636b24/"
-[[params.social]]
-  name = "Facebook"
-  icon = "fa fa-facebook fa-2x"
-  weight = 5
-  url = "https://facebook.com/kyle.engibous"
-[[params.social]]
-  name = "Instagram"
-  icon = "fa fa-instagram fa-2x"
-  weight = 5
-  url = "https://instagram.com/kengibous"
-
-# Menu links
-[[menu.main]]
+[[menus.main]]
   name = "Blog"
+  pageRef = "/posts"
   weight = 1
-  url  = "posts/"
-[[menu.main]]
+[[menus.main]]
   name = "About"
+  pageRef = "/about"
   weight = 2
-  url = "about/"
-[[menu.main]]
+[[menus.main]]
   name = "Contact"
+  pageRef = "/contact"
   weight = 3
-  url = "contact/"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+
+[sitemap]
+  changeFreq = "monthly"
