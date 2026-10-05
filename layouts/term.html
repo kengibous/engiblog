@@ -1,0 +1,9 @@
+{{ define "main" }}
+<header class="page-header">
+  <p class="eyebrow">{{ .Data.Singular | title }}</p>
+  <h1>{{ .Title }}</h1>
+</header>
+{{- $paginator := .Paginate .Pages }}
+{{ partial "post-list.html" $paginator.Pages }}
+{{ partial "pagination.html" $paginator }}
+{{ end }}

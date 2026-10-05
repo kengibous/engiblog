@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    {{ partial "social.html" . }}
+    <p>
+      © {{ with site.Params.since }}{{ if lt . now.Year }}{{ . }}–{{ end }}{{ end }}{{ now.Year }} {{ site.Params.author }}
+      · Built with <a href="https://gohugo.io/">Hugo</a>
+      · <a href="{{ "index.xml" | relURL }}">RSS</a>
+    </p>
+  </div>
+</footer>

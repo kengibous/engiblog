@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+{{- $title := cond .IsHome site.Title (printf "%s · %s" .Title site.Title) }}
+<title>{{ $title }}</title>
+{{- $desc := or .Description .Summary site.Params.description | plainify | truncate 160 }}
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ site.Params.author }}">
+{{- with .Keywords | default site.Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}
+{{- if or (eq hugo.Environment "development") .Params.noindex }}
+<meta name="robots" content="noindex">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- range .AlternativeOutputFormats }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon-16x16.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "images/avatar.jpg" | relURL }}">
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)">
+{{ partial "opengraph.html" . }}
+{{ partial "twitter_cards.html" . }}
+{{ partial "schema.html" . }}
+
+{{/* Apply the saved theme before first paint to avoid a flash */}}
+<script>
+  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+
+{{- $css := slice (resources.Get "css/main.css") (resources.Get "css/syntax.css") (resources.Get "css/custom.css") | resources.Concat "css/site.css" }}
+{{- if hugo.IsProduction }}
+  {{- $css = $css | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- else }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- end }}
+
+{{- $js := resources.Get "js/main.js" | js.Build (dict "minify" hugo.IsProduction) }}
+{{- if hugo.IsProduction }}{{ $js = $js | fingerprint }}{{ end }}
+<script src="{{ $js.RelPermalink }}" defer></script>
