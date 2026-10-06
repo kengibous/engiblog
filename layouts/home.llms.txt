@@ -1,0 +1,20 @@
+# {{ site.Title }}
+
+> {{ site.Params.author }} — {{ site.Params.info }}. Personal website and blog covering Kubernetes, DevOps and cloud architecture.
+
+{{ with site.GetPage "/about" }}{{ index (split (strings.TrimSpace .RawContent) "\n\n") 0 }}{{ end }}
+
+## Pages
+{{ range slice "/about" "/contact" }}{{ with site.GetPage . }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}{{ end }}{{ end }}
+
+## Posts
+{{ range where site.RegularPages "Section" "posts" }}
+- [{{ .Title }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}){{ with .Description }}: {{ . }}{{ end }}{{ end }}
+
+## Optional
+
+- [RSS feed]({{ "index.xml" | absURL }}): Full feed of posts
+- [Sitemap]({{ "sitemap.xml" | absURL }})
+{{ range site.Params.social }}- [{{ .name }}]({{ .url }})
+{{ end -}}
