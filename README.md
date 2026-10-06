@@ -16,7 +16,7 @@ The theme lives directly in this repo (`layouts/`, `assets/`) — no theme submo
 hugo new content posts/my-new-post.md
 ```
 
-Set `draft = false` when it's ready. Optional front matter: `description`, `tags`, `lastmod` (shows "Updated <date>"), `toc = true/false` (table of contents; automatic for long posts), `comments = false` (hides Disqus).
+Set `draft = false` when it's ready. Optional front matter: `description`, `tags`, `lastmod` (shows "Updated <date>"), `toc = true/false` (table of contents; automatic for long posts), `comments = false` (hides comments).
 
 ## Layout
 
@@ -31,6 +31,8 @@ Set `draft = false` when it's ready. Optional front matter: `description`, `tags
 | `static/` | Files copied as-is (avatar, favicons) |
 
 ## Netlify
+
+Comments: [giscus](https://giscus.app) stores comments in this repo's GitHub Discussions. Settings are under `[params.giscus]` in `hugo.toml`; comments only appear once `categoryId` is set.
 
 Analytics: set `goatcounter` in `hugo.toml` to your [GoatCounter](https://www.goatcounter.com) site code. It only loads on production builds.
 
