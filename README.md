@@ -32,5 +32,7 @@ Set `draft = false` when it's ready. Optional front matter: `description`, `tags
 
 ## Netlify
 
+`/llms.txt` (an index of the site for AI tools, see https://llmstxt.org) is generated on every build from `layouts/home.llms.txt` — no manual updates needed.
+
 `netlify.toml` sets the build command, Hugo version, deploy-preview base URLs, security/caching headers and redirects.
 The contact form uses Netlify Forms (`data-netlify="true"`) with reCAPTCHA and a honeypot field.

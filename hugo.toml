@@ -5,6 +5,16 @@ defaultContentLanguage = "en"
 enableRobotsTXT = true
 capitalizeListTitles = false
 
+# llms.txt — a Markdown index of the site for AI tools (https://llmstxt.org)
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["html", "rss", "llms"]
+
 [pagination]
   pagerSize = 20
 

@@ -25,6 +25,11 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
 
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
 # CSS/JS are fingerprinted by Hugo, so they can be cached forever.
 [[headers]]
   for = "/css/*"
