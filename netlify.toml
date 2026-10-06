@@ -10,12 +10,13 @@
 [context.production.environment]
   HUGO_ENV = "production"
 
-# Previews build with their own URL so links/assets resolve on the preview domain.
+# Previews build with their own URL so links/assets resolve on the preview domain,
+# and in the "preview" environment so analytics and comments stay off.
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify --buildFuture -e preview -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify -e preview -b $DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*"

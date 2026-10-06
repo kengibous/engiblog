@@ -32,6 +32,8 @@ Set `draft = false` when it's ready. Optional front matter: `description`, `tags
 
 ## Netlify
 
+Analytics: set `goatcounter` in `hugo.toml` to your [GoatCounter](https://www.goatcounter.com) site code. It only loads on production builds.
+
 `/llms.txt` (an index of the site for AI tools, see https://llmstxt.org) is generated on every build from `layouts/home.llms.txt` — no manual updates needed.
 
 `netlify.toml` sets the build command, Hugo version, deploy-preview base URLs, security/caching headers and redirects.
