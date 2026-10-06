@@ -32,6 +32,11 @@ capitalizeListTitles = false
   # Number of recent posts shown on the home page
   recentPosts = 5
 
+  # GoatCounter analytics (https://www.goatcounter.com) — set to your site code,
+  # e.g. "kyleengibous" for kyleengibous.goatcounter.com. Empty = no analytics.
+  # Only loads in production builds, so local previews aren't counted.
+  goatcounter = "kyleengibous"
+
 # Social links — `icon` is the name of an SVG in assets/icons/
 [[params.social]]
   name = "GitHub"
