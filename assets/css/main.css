@@ -399,6 +399,32 @@ img { max-width: 100%; height: auto; }
 .prose { overflow-wrap: break-word; }
 .prose a { overflow-wrap: anywhere; }
 .prose > :first-child { margin-top: 0; }
+
+.toc {
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: .9375rem;
+}
+.toc summary {
+  color: var(--muted);
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toc nav { margin-top: .5rem; }
+.toc ul { margin: 0; padding-left: 1.1rem; list-style: none; }
+.toc nav > ul { padding-left: 0; }
+.toc li { margin: .3rem 0; }
+/* Skip empty wrapper levels (e.g. a post that starts at ## instead of #) */
+.toc li:not(:has(> a)) { margin: 0; }
+.toc li:not(:has(> a)) > ul { padding-left: 0; }
+.toc a { color: var(--text); text-decoration: none; }
+.toc a:hover { color: var(--accent); text-decoration: underline; }
 .prose h1, .prose h2, .prose h3, .prose h4 { position: relative; margin: 2.25rem 0 .75rem; }
 .prose h1 { font-size: 1.75rem; }
 .prose h2 { font-size: 1.5rem; }

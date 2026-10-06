@@ -1,0 +1,14 @@
+{{- /* Table of contents: on when front matter `toc` says so, otherwise when the
+       post is long enough to benefit (see tocMinHeadings / tocMinWords). */ -}}
+{{- $show := false }}
+{{- if isset .Params "toc" }}
+  {{- $show = .Params.toc }}
+{{- else }}
+  {{- $show = and (ge (len .Fragments.HeadingsMap) (site.Params.tocMinHeadings | default 3)) (ge .WordCount (site.Params.tocMinWords | default 600)) }}
+{{- end }}
+{{- if and $show (gt (len .Fragments.HeadingsMap) 0) }}
+<details class="toc" open>
+  <summary>On this page</summary>
+  {{ .TableOfContents }}
+</details>
+{{- end }}
