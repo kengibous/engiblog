@@ -31,6 +31,10 @@ capitalizeListTitles = false
   since = 2019
   # Number of recent posts shown on the home page
   recentPosts = 5
+  # Posts get a table of contents automatically when they have at least this
+  # many headings and words. Override per post with `toc = true` / `toc = false`.
+  tocMinHeadings = 3
+  tocMinWords = 600
 
   # GoatCounter analytics (https://www.goatcounter.com) — set to your site code,
   # e.g. "kyleengibous" for kyleengibous.goatcounter.com. Empty = no analytics.
@@ -85,10 +89,19 @@ capitalizeListTitles = false
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
   [markup.highlight]
     noClasses = false
     codeFences = true
     guessSyntax = true
+
+# "Updated" dates come only from a post's `lastmod` front matter, not git history
+# (every post was re-committed during the 2023 Hugo move).
+[frontmatter]
+  lastmod = ["lastmod", "date"]
 
 [sitemap]
   changeFreq = "monthly"

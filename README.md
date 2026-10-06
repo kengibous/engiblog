@@ -16,7 +16,7 @@ The theme lives directly in this repo (`layouts/`, `assets/`) — no theme submo
 hugo new content posts/my-new-post.md
 ```
 
-Set `draft = false` when it's ready. Optional front matter: `description`, `tags`, `comments = false` (hides Disqus).
+Set `draft = false` when it's ready. Optional front matter: `description`, `tags`, `lastmod` (shows "Updated <date>"), `toc = true/false` (table of contents; automatic for long posts), `comments = false` (hides Disqus).
 
 ## Layout
 
