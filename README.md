@@ -34,7 +34,7 @@ Set `draft = false` when it's ready. Optional front matter: `description`, `tags
 
 Comments: [giscus](https://giscus.app) stores comments in this repo's GitHub Discussions. Settings are under `[params.giscus]` in `hugo.toml`; comments only appear once `categoryId` is set.
 
-Analytics: set `goatcounter` in `hugo.toml` to your [GoatCounter](https://www.goatcounter.com) site code. It only loads on production builds.
+Analytics: Cloudflare Web Analytics, added automatically by Cloudflare (turned on in the Cloudflare dashboard), so there is no analytics code in this repo.
 
 `/llms.txt` (an index of the site for AI tools, see https://llmstxt.org) is generated on every build from `layouts/home.llms.txt` — no manual updates needed.
 

@@ -2,7 +2,7 @@
 draft = false
 date = 2023-01-28T17:45:00-06:00
 title = "Hugo Conversion"
-description = "Switch from Hugo to Gatsby"
+description = "Switching my blog from Gatsby to Hugo"
 slug = ""
 authors = ["kyle engibous"]
 tags = ["hugo", "static", "gatsby"]

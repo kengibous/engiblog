@@ -41,4 +41,3 @@
 {{- $js := resources.Get "js/main.js" | js.Build (dict "minify" hugo.IsProduction) }}
 {{- if hugo.IsProduction }}{{ $js = $js | fingerprint }}{{ end }}
 <script src="{{ $js.RelPermalink }}" defer></script>
-{{ partial "analytics.html" . }}
