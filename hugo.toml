@@ -45,7 +45,7 @@ capitalizeListTitles = false
     repo = "kengibous/engiblog"
     repoId = "MDEwOlJlcG9zaXRvcnkxODQxNjk0MzE="
     category = "Comments"
-    categoryId = ""
+    categoryId = "DIC_kwDOCvoz184DHS3s"
     mapping = "pathname"
 
 # Social links — `icon` is the name of an SVG in assets/icons/
