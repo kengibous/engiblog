@@ -526,7 +526,12 @@ pre {
   .post-nav-next { grid-column: auto; }
 }
 
-.comments { margin-top: 3rem; }
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.comments h2 { margin: 0 0 1.25rem; font-size: 1.25rem; }
 
 .not-found { padding-block: 4rem; text-align: center; }
 

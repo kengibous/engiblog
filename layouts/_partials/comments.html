@@ -1,0 +1,16 @@
+{{- /* giscus comments (GitHub Discussions). Only on the live site, and only
+       once every ID is configured. main.js loads the widget so its theme
+       follows the site's light/dark toggle. */ -}}
+{{- with site.Params.giscus }}
+  {{- if and hugo.IsProduction .repo .repoId .category .categoryId }}
+<section class="comments" aria-label="Comments">
+  <h2>Comments</h2>
+  <div class="giscus-container"
+    data-repo="{{ .repo }}"
+    data-repo-id="{{ .repoId }}"
+    data-category="{{ .category }}"
+    data-category-id="{{ .categoryId }}"
+    data-mapping="{{ .mapping | default "pathname" }}"></div>
+</section>
+  {{- end }}
+{{- end }}

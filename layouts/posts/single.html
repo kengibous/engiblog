@@ -22,9 +22,7 @@
 </nav>
 {{- end }}
 
-{{- if and hugo.IsProduction site.Config.Services.Disqus.Shortname (ne .Params.comments false) }}
-<section class="comments">
-  {{ partial "disqus.html" . }}
-</section>
+{{- if ne .Params.comments false }}
+{{ partial "comments.html" . }}
 {{- end }}
 {{ end }}
