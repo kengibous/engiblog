@@ -11,7 +11,7 @@
   HUGO_ENV = "production"
 
 # Previews build with their own URL so links/assets resolve on the preview domain,
-# and in the "preview" environment so analytics and comments stay off.
+# and in the "preview" environment so comments stay off.
 [context.deploy-preview]
   command = "hugo --gc --minify --buildFuture -e preview -b $DEPLOY_PRIME_URL"
 
@@ -24,7 +24,7 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 [[headers]]
   for = "/llms.txt"

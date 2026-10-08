@@ -33,11 +33,6 @@ capitalizeListTitles = false
   tocMinHeadings = 3
   tocMinWords = 600
 
-  # GoatCounter analytics (https://www.goatcounter.com) — set to your site code,
-  # e.g. "kyleengibous" for kyleengibous.goatcounter.com. Empty = no analytics.
-  # Only loads in production builds, so local previews aren't counted.
-  goatcounter = "kyleengibous"
-
   # Comments via giscus (https://giscus.app), stored in this repo's GitHub
   # Discussions. Comments stay off until categoryId is set — get it from
   # giscus.app after enabling Discussions and installing the giscus app.
